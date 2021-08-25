@@ -9,13 +9,13 @@
 .app {
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background: #EAFFD4;
 }
 
 .logo {
     align-self: flex-start;
-    padding-top: 30px;
+    margin-top: 30px;
     align-items: center;
     display: flex;
     margin: 0 0 0 30px;
@@ -50,4 +50,98 @@
     font-weight: 300;
     height: 2rem;
     background-color: #EAFFD4;
+    transition: ease 0.5s;
+    cursor: point er;
+}
+
+.def-btn:hover {
+    transform: translateY(2px);
+    background-color: #d5ffa8;
+}
+
+.login-btn-wrapper {
+    width: 100%;
+    padding-right: 180px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-btn-home {
+    width: 170%;
+    font-weight: 300;
+    height: 2rem;
+    margin-right: 30px;
+    background-color: #EAFFD4;
+    transition: ease 0.5s;
+    cursor: pointer;
+    background-color: #ffff;
+}
+
+.login-btn-home:hover {
+    background-color: #d5ffa8;
+}
+
+
+/*Homepage Styles*/
+
+.home-container {
+    margin-left: 130px;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-section {
+    width: 45%;
+}
+
+.welcome-text {
+    margin-bottom: 2rem;
+    line-height: 75px;
+    font-size: 2rem;
+}
+
+.welcome-text span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-bar {
+    font-weight: 200;
+}
+
+.search-icon {
+    color: #4E901E;
+    border: none;
+    background: none;
+    position: absolute;
+    align-self: flex-end;
+    margin-left: 35%;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.3rem);
+    }
+    100% {
+        transform: translateY(0.3rem);
+    }
 }
