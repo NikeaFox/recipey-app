@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
 .register {
@@ -30,9 +31,13 @@
 }
 
 .error {
+    text-align: center;
+    display: flex;
+    align-items: center;
     color: #4E901E;
     font-size: 0.7rem;
     font-weight: 300;
+    margin-top: 1.5rem;
 }
 
 .login-form-text {
@@ -41,8 +46,8 @@
 }
 
 .login-form-text a {
-    text-decoration: none;
-    color: #000000;
+    text-decoration: underline;
+    color: #4E901E;
 }
 
 .pass-reset-text {
