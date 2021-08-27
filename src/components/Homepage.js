@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import fire from "../fire";
+import 'firebase/auth'
 import { IoIosSearch } from "react-icons/io";
 import { useState } from "react";
 import RecipeCard from "./RecipeCard";

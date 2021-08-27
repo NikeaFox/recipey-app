@@ -3,6 +3,7 @@ import "../styles/Form.css";
 import fire from "../fire";
 import { useHistory } from "react-router-dom";
 import Header from "./Header";
+import 'firebase/auth'
 
 function RegisterForm(props) {
 	const history = useHistory();

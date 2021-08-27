@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Form.css";
 import { Link, useHistory } from "react-router-dom";
 import fire from "../fire";
+import 'firebase/auth'
 import Header from "./Header";
 function LoginForm(props) {
 	const history = useHistory();
