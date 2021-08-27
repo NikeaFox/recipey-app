@@ -1,23 +1,24 @@
  import firebase from "firebase";
  // Your web app's Firebase configuration
+ require("dotenv").config();
 
  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
- var firebaseConfig = {
+ const firebaseConfig = {
 
-     apiKey: "AIzaSyDC4aCBe0sXmnrFnVDQcqexiwEpeVG30mU",
+     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
-     authDomain: "recipey-app-c57a7.firebaseapp.com",
+     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 
-     projectId: "recipey-app-c57a7",
+     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 
-     storageBucket: "recipey-app-c57a7.appspot.com",
+     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 
-     messagingSenderId: "108143405850",
+     messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDER_ID,
 
-     appId: "1:108143405850:web:6dc374f6e0cfbe3d479aa3",
+     appId: process.env.REACT_APP_FIREBASE_APP_ID,
 
-     measurementId: "G-J0GXECLQJZ"
+     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 
  };
 

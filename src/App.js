@@ -10,6 +10,8 @@ import LoginForm from "./components/LoginForm";
 import Homepage from "./components/Homepage";
 import { useState, useEffect } from "react";
 import fire from "./fire";
+import RecipeDetail from "./components/RecipeDetail";
+
 
 function App() {
 	const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ function App() {
 	const [error, setError] = useState("");
 	const [name, setName] = useState("");
 	const [user, setUser] = useState("");
-
+	
 	const clearInputs = () => {
 		setEmail("");
 		setPassword("");
@@ -29,25 +31,25 @@ function App() {
 
 	const authListener = () => {
 		fire.auth().onAuthStateChanged((user) => {
-			if(user) {
+			if (user) {
 				setUser(user);
-			}else {
-				setUser('');
+			} else {
+				setUser("");
 			}
-		})
-	}
+		});
+	};
 
 	useEffect(() => {
 		authListener();
-	},[])
- 
+	}, []);
+
 	return (
 		<div className='app'>
 			<Router>
 				<Switch>
 					<Route exact path='/'>
 						<Redirect to='/home' />
-					</Route>{" "}
+					</Route>
 					<Route path='/log'>
 						<LoginForm
 							email={email}
@@ -58,8 +60,8 @@ function App() {
 							setError={setError}
 							clearErrors={clearErrors}
 							clearInputs={clearInputs}
-						/>{" "}
-					</Route>{" "}
+						/>
+					</Route>
 					<Route path='/register'>
 						<RegisterForm
 							email={email}
@@ -72,15 +74,16 @@ function App() {
 							clearInputs={clearInputs}
 							name={name}
 							setName={setName}
-						/>{" "}
-					</Route>{" "}
-					<Route path='/home'>
-						<Homepage 	
-							user={user}
 						/>
-					</Route>{" "}
-				</Switch>{" "}
-			</Router>{" "}
+					</Route>
+					<Route exact path='/home'>
+						<Homepage user={user} />
+					</Route>
+					<Route path="/home/:id">
+						<RecipeDetail />
+					</Route>
+				</Switch>
+			</Router>
 		</div>
 	);
 }

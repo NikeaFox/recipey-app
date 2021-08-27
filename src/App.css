@@ -16,17 +16,19 @@
 .logo {
     align-self: flex-start;
     margin-top: 30px;
+    justify-content: center;
     align-items: center;
     display: flex;
     margin: 0 0 0 30px;
 }
 
-.logo__img {
+.logo-img {
+    margin-top: 30px;
     width: 60px;
     margin-right: 30px;
 }
 
-.logo__text {
+.logo-text {
     color: #0F0F0F;
     font-size: 2rem;
 }
@@ -70,10 +72,11 @@
     width: 170%;
     font-weight: 300;
     height: 2rem;
-    margin-right: 30px;
+    margin-left: 4rem;
     background-color: #EAFFD4;
     transition: ease 0.5s;
     cursor: pointer;
+    margin-left: 20px;
     background-color: #ffff;
 }
 
@@ -85,17 +88,19 @@
 /*Homepage Styles*/
 
 .home-container {
-    margin-left: 130px;
+    display: flex;
+    margin-left: 4rem;
     margin-top: 8%;
     display: flex;
     align-items: center;
 }
 
 .welcome-section {
-    width: 45%;
+    width: 100%;
 }
 
 .welcome-text {
+    text-align: left;
     margin-bottom: 2rem;
     line-height: 75px;
     font-size: 2rem;
@@ -107,12 +112,15 @@
 }
 
 .search-form {
+    flex-direction: column;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 .search-bar {
+    padding-left: 0.5rem;
+    width: 100%;
     font-weight: 200;
 }
 
@@ -122,11 +130,12 @@
     background: none;
     position: absolute;
     align-self: flex-end;
-    margin-left: 35%;
+    margin-right: 10px;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .search-icon:hover {
@@ -143,5 +152,173 @@
     }
     100% {
         transform: translateY(0.3rem);
+    }
+}
+
+
+/*Results*/
+
+.searchbar-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.result-search-bar-wrapper {
+    margin: auto;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.recipe-card {
+    text-align: center;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 480px;
+    margin-bottom: 50px;
+}
+
+.recipe-img {
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.country {
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px #4E901E;
+}
+
+.line {
+    width: 220px;
+}
+
+.ingredients {
+    font-weight: 200;
+}
+
+.dish-type-selector {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+}
+
+
+/*Recipe Detail*/
+
+.recipe-detail-container {
+    flex-wrap: wrap;
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-detail-card {
+    padding: 50px;
+    width: 500px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recipe-img-detail {
+    width: 200px;
+}
+
+.recipe-name-detail {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.country-detail {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.source-text {
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.source-text-info {
+    color: #4E901E;
+}
+
+.ingredient-container {
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+    width: 60%;
+}
+
+.ingredient-header {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.ingredients-list {
+    margin-top: 50px;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.ingredient-item {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.instructions-text {
+    text-decoration: none;
+    color: #4E901E;
+}
+
+@media screen and (max-width:1000px) {
+    * {
+        font-size: 16px;
+    }
+    .recipe-detail-card {
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    * {
+        font-size: 10px;
+    }
+    .ingredient-container {
+        margin-left: 0;
+        min-height: 0;
+    }
+    .logo-img {
+        margin-top: 15px;
+    }
+    .recipe-detail-card {
+        width: 500;
+        margin-bottom: 4rem;
     }
 }
