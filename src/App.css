@@ -310,6 +310,15 @@
     * {
         font-size: 10px;
     }
+    .card {
+        border-width: 1px;
+    }
+    .welcome-section {
+        margin-top: 20em;
+    }
+    .welcome-text {
+        line-height: initial;
+    }
     .ingredient-container {
         margin-left: 0;
         min-height: 0;
